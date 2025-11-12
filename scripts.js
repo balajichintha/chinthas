@@ -5,14 +5,14 @@ const circle = document.querySelector('.circle');
 
 // 💡 NEW: Map tab indices to desired background colors
 const colorMap = [
-  '#8714ec',
-  '#3f740f',
-  '#024f4c',
-  '#ae034a',
-  '#137759',
-  '#791ef0',
-  '#ce1139',
-  '#147c9e'
+  '#151418',
+  '#151418',
+  '#151418',
+  '#151418',
+  '#151418',
+  '#151418',
+  '#151418',
+  '#151418'
 ];
 
 // Variable to store the currently active index

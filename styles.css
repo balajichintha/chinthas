@@ -7,12 +7,43 @@
 
 body {
     margin: 0;
+    color: #151418;
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site_btn {
+    position: relative;
+    display: inline-grid;
+    text-decoration: none;
+    transition: .4s all ease;
+    font-family: "Calistoga", serif;
+    font-size: clamp(14px, 15vw/12, 15px);
+    line-height: clamp(15px, 16vw/12, 16px);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 10px 10px;
+    color: #f2f2f2;
+    border: 2px solid rgb(21, 20, 24);
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0) -2px 2px 0px 0px;
+}
+
+.site_btn:is(:hover, :focus) {
+    box-shadow: rgb(140, 82, 255) -2px 2px 0px 0px;
+}
+
+.site_btn.brd_light {
+    border-color: #8c52ff;
 }
 
 .circular-tabs {
@@ -77,9 +108,14 @@ h1, h2, h3, h4, h5, h6, p {
     scroll-snap-align: start;
     min-height: 100vh;
     padding: 0;
-    display: flex;
+    display: grid;
+    position: relative;
+    grid-template-columns: 65% auto;
+    grid-template-rows: auto;
+    justify-content: flex-end;
+    max-width: 100%;
+    padding-inline: 0 !important;
     align-items: center;
-    justify-content: center;
 }
 
 .secont_content {
@@ -88,52 +124,31 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    min-height: 500px;
-    max-width: 550px;
     box-sizing: border-box;
-    border-radius: 25px;
     padding: 50px;
+    background: #242329;
+    color: #fff;
+    gap: 20px;
+    justify-content: center;
+    box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .secont_content h2 {
     margin: 0;
     padding: 0;
     position: relative;
-    font-size: clamp(22px, 28vw/12, 28px);
-    line-height: clamp(24px, 30vw/12, 30px);
-    font-weight: 600;
+    font-family: "Calistoga", serif;
+    font-size: clamp(20px, 25vw/12, 25px);
+    line-height: clamp(20px, 25vw/12, 25px);
+    font-weight: 400;
 }
 
-#section_content1 {
-    background: rgb(101, 22, 170);
-}
-
-#section_content2 {
-    background: #2b5208;
-}
-
-#section_content3 {
-    background: #033d3a;
-}
-
-#section_content4 {
-    background: #8d053d;
-}
-
-#section_content5 {
-    background: #0e5f46;
-}
-
-#section_content6 {
-    background: #6019bc;
-}
-
-#section_content7 {
-    background: #a90e2f;
-}
-
-#section_content8 {
-    background: #106783;
+.secont_content p {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(16px, 17vw/12, 17px);
+    line-height: clamp(26px, 28vw/12, 28px);
+    font-weight: 300;
+    letter-spacing: 0.4px;
 }
 
 #circularTabsWrapper {
@@ -147,20 +162,14 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-@media only screen and (max-width: 1800px) {
-    .content {
-        padding-left: 15%;
-    }
-}
+@media only screen and (max-width: 1800px) {}
 
 @media only screen and (max-width: 1500px) {
     .circle {
         left: -17%;
     }
 
-    .content {
-        padding-left: 30%;
-    }
+
 }
 
 @media only screen and (max-width: 1299px) {
@@ -212,7 +221,7 @@ header {
 header.scrolled {
     position: fixed;
     top: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
     backdrop-filter: blur(8px);
 }
@@ -316,7 +325,7 @@ header.scrolled::after {
 }
 
 #hp_banner h1::after {
-    content: "Balaji";
+    content: "Balaji & Rama";
     border-top: 1px solid #f2f2f2;
     margin: 20px 0 0;
     padding: 40px 0 0;
@@ -378,6 +387,8 @@ header.scrolled::after {
 /*-----------footer-----------*/
 footer {
     position: relative;
+    background: #242329;
+    color: #f2f2f2;
 }
 
 footer .rows-inner {
@@ -392,16 +403,15 @@ footer h2 {
     padding: 0;
     margin: 18px 0 35px;
     font-family: "Calistoga", serif;
-    font-size: clamp(20px, 25vw/12, 25px);
+    font-size: clamp(18px, 20vw/12, 20px);
     line-height: clamp(20px, 25vw/12, 25px);
     font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
-    color: #000;
 }
 
 footer .logo img {
-    width: 185px;
+    width: 150px;
 }
 
 .social_links {
@@ -419,7 +429,7 @@ footer .logo img {
     background: #fff;
     border-radius: 10px;
     box-shadow: rgb(0, 0, 0) -2px 2px 0px 0px;
-    border: 2px solid #000;
+    border: 2px solid rgb(21, 20, 24);
     width: 32px;
     height: 32px;
     justify-content: center;
@@ -439,23 +449,6 @@ footer .logo img {
     margin: 0;
 }
 
-#footer_links a {
-    position: relative;
-    display: inline-grid;
-    text-decoration: none;
-    transition: .4s all ease;
-    font-family: "Calistoga", serif;
-    font-size: clamp(15px, 16vw/12, 16px);
-    line-height: clamp(15px, 16vw/12, 16px);
-    font-weight: 400;
-    letter-spacing: 1px;
-    padding: 10px 10px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    color: #000;
-    box-shadow: rgb(0, 0, 0) -2px 2px 0px 0px;
-}
-
 #footer_links a:first-child {
     background: #8c52ff;
     color: #fff;
@@ -463,18 +456,23 @@ footer .logo img {
 
 #footerCopy {
     position: relative;
-    padding: 18px 0;
+    padding: 0;
     margin: 0;
     text-align: center;
     width: 100%;
-    color: #6e6d7a;
+    color: #9E9E9E;
     font-family: "DM Sans", sans-serif;
     font-size: 14px;
-    border-top: 1px solid #dbdae7;
+}
+
+#footer_bottom {
+    position: relative;
+    padding: 18px 15px;
+    background: #1a1919;
 }
 
 .social_links a:is(:hover, :focus) {
-    box-shadow: rgb(0, 0, 0) -4px 4px 0px 0px;
+    box-shadow: rgb(140, 82, 255) -2px 2px 0px 0px;
 }
 
 #footer_links a:is(:hover, :focus) {
