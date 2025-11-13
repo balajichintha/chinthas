@@ -9,6 +9,9 @@ body {
     margin: 0;
     color: #151418;
     scroll-behavior: smooth;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(14px, 15vw/12, 15px);
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -118,7 +121,7 @@ a {
     align-items: center;
 }
 
-.secont_content {
+.section_content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -133,7 +136,7 @@ a {
     box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.secont_content h2 {
+.section_content h2 {
     margin: 0;
     padding: 0;
     position: relative;
@@ -143,7 +146,7 @@ a {
     font-weight: 400;
 }
 
-.secont_content p {
+.section_content p {
     font-family: "DM Sans", sans-serif;
     font-size: clamp(16px, 17vw/12, 17px);
     line-height: clamp(26px, 28vw/12, 28px);
@@ -154,6 +157,56 @@ a {
 #circularTabsWrapper {
     position: relative;
     overflow: hidden;
+}
+
+.section_content ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px 50px;
+}
+
+.section_content ul li {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    border: 2px solid #292c34;
+    background: linear-gradient(#ffffff0f, #040811 30%);
+}
+
+.section_content ul li h3 {
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(18px, 20vw/12, 20px);
+    line-height: clamp(18px, 20vw/12, 20px);
+    font-weight: 600;
+}
+
+.section_content .pricing_details {
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section_content button {
+    font-family: "Calistoga", serif;
+    font-size: clamp(14px, 15vw/12, 15px);
+    line-height: clamp(15px, 16vw/12, 16px);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 10px 10px;
+    background: none;
+    color: #fff;
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, #8a3bef00, #8a3bef 25%, #8a3bef 75%, #fff0);
+    border-image-slice: 1;
 }
 
 @media only screen and (max-width: 2200px) {
@@ -261,6 +314,11 @@ header.scrolled::after {
 .logo a {
     position: relative;
     display: inline-grid;
+    top: -5px;
+}
+
+.logo img {
+    width: 160px;
 }
 
 #navlinks {
@@ -408,10 +466,6 @@ footer h2 {
     font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
-}
-
-footer .logo img {
-    width: 150px;
 }
 
 .social_links {
