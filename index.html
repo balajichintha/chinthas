@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bara Works</title>
+  <title>Chinthas</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -13,13 +13,19 @@
   <header>
     <div id="header_inner">
       <div class="logo"><a href="/"><img src="pics/logo.svg" alt="Chinthas logo"></a></div>
-      <div class="menu-icon" id="menuIcon">☰</div>
-      <ul id="navlinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+      <nav class="navbar" data-navbar>
+        <ul id="navlinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -144,22 +150,91 @@
 </div>
 
 <footer>
-  <div class="rows-inner">
-    <a class="logo" href="/"><img src="pics/logocolored.svg" alt="Chinthas logo"></a>
-    <h2>Every frame tells a story. Let’s tell yours.</h2>
-    <div id="footer_links">
-      <a class="site_btn" href="/">Packages & Pricing</a>
-      <a class="site_btn brd_light" href="/">Book a Session</a>
-    </div>
-    <div class="social_links">
-      <a id="fb" href="/"><img src="pics/fb_icon.png" alt="Chinthas Facebook"></a>
-      <a id="insta" href="/"><img src="pics/insta_icon.png" alt="Chinthas Instagram"></a>
-      <a id="x_icon" href="/"><img src="pics/x_icon.png" alt="Chinthas X"></a>
-      <a id="youtube" href="/"><img src="pics/youtube_icon.png" alt="Chinthas Youtube"></a>
+  <div id="footer_top">
+    <div class="rows-inner">
+      <div id="footertop_left">
+        <h2>Every frame. <br> tells a story. <br> Let’s tell yours.</h2>
+        <p>We capture real moments, honest emotions, and the beauty in your story. Whether it’s a portrait, event, or product — we create visuals that feel alive.</p>
+        <div id="footer_links">
+          <a class="site_btn" href="/">Packages &amp; Pricing</a>
+          <a class="site_btn brd_light" href="/">Book a Session</a>
+        </div>
+        <div class="footer_address">
+          <h3>Address:</h3>
+          <p class="contact-info"> 941 Saqrqorish Road, alandalos, grnata, wa 47122-4194 </p>
+        </div>
+        <div class="footer_address">
+          <h3>Phone:</h3>
+          <a href="tel:9652963487" class="contact-info">9652963487</a>
+          <a href="tel:9739734820" class="contact-info">9739734820</a>
+        </div>
+        <div class="footer_address">
+          <h3>Email:</h3>
+          <a href="mailto:imbalajich@gmail.com" class="contact-info">imbalajich@gmail.com</a>
+        </div>
+        <div class="social_links">
+          <a id="fb" href="/"><img src="pics/fb_icon.png" alt="Chinthas Facebook"></a>
+          <a id="insta" href="/"><img src="pics/insta_icon.png" alt="Chinthas Instagram"></a>
+          <a id="x_icon" href="/"><img src="pics/x_icon.png" alt="Chinthas X"></a>
+          <a id="youtube" href="/"><img src="pics/youtube_icon.png" alt="Chinthas Youtube"></a>
+        </div>
+      </div>
+      <div id="footertop_right">
+        <form>
+          <!-- Name -->
+          <label for="name">Name:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            minlength="6" 
+            required 
+            placeholder="Enter your name (min 6 letters)"
+          />
+        
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="Enter your email"
+          />
+        
+          <!-- Phone -->
+          <label for="phone">Phone:</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone"
+            pattern="[6-9][0-9]{9}" 
+            maxlength="10"
+            required 
+            placeholder="10-digit number starting with 6/7/8/9"
+          />
+        
+          <!-- Message -->
+          <label for="message">Message:</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            required 
+            placeholder="Write your message..."
+          ></textarea>
+        
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+        </form>
+        
+      </div>
     </div>
   </div>
   <div id="footer_bottom">
-    <p id="footerCopy"></p>
+    <div class="rows-inner">
+      <a class="logo" href="/"><img src="pics/logocolored.svg" alt="Chinthas logo"></a>
+      <p id="footerCopy"></p>
+    </div>
   </div>
 </footer>
   

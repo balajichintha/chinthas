@@ -1,3 +1,21 @@
+// navbar
+
+const elemToggleFunc = function (elem) { elem.classList.toggle("headmobactive"); }
+
+const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const navbar = document.querySelector("[data-navbar]");
+
+navToggleBtn.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});
+
+
+
+
 const tabs = document.querySelectorAll('.tab');
 const sections = document.querySelectorAll('.section');
 const content = document.querySelector('.content');
@@ -103,25 +121,19 @@ window.addEventListener("scroll", () => {
 
 
 
-const menuIcon = document.getElementById("menuIcon");
-const navLinks = document.getElementById("navLinks");
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
 
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
   } else {
-    header.classList.remove("scrolled");
+    header.classList.remove('scrolled');
   }
 });
 
 const year = new Date().getFullYear();
-document.getElementById("footerCopy").innerHTML = `© ${year} Chinthas. All rights reserved.`;
+document.getElementById("footerCopy").innerHTML =
+  `© ${year} <span>Chinthas.</span> All rights reserved.`;
 
 
 // Parallax Scrolling Effect
@@ -138,6 +150,7 @@ $(window).on("scroll resize load", function () {
     }
   });
 });
+
 
 
 
