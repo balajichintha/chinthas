@@ -160,16 +160,16 @@
           <a class="site_btn brd_light" href="/">Book a Session</a>
         </div>
         <div class="footer_address">
-          <h3>Address:</h3>
+          <h3 id="add_title">Address:</h3>
           <p class="contact-info"> 941 Saqrqorish Road, alandalos, grnata, wa 47122-4194 </p>
         </div>
         <div class="footer_address">
-          <h3>Phone:</h3>
+          <h3 id="add_phn">Phone:</h3>
           <a href="tel:9652963487" class="contact-info">9652963487</a>
           <a href="tel:9739734820" class="contact-info">9739734820</a>
         </div>
         <div class="footer_address">
-          <h3>Email:</h3>
+          <h3 id="add_mail">Email:</h3>
           <a href="mailto:imbalajich@gmail.com" class="contact-info">imbalajich@gmail.com</a>
         </div>
         <div class="social_links">
@@ -180,19 +180,22 @@
         </div>
       </div>
       <div id="footertop_right">
-        <form>
+        <form class="form_data">
           <!-- Name -->
-          <label for="name">Name:</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            minlength="6" 
-            required 
-            placeholder="Enter your name (min 6 letters)"
-          />
+          <div>
+            <label for="name">Name:</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              minlength="6" 
+              required 
+              placeholder="Enter your name (min 6 letters)"
+            />
+          </div>
         
           <!-- Email -->
+         <div>
           <label for="email">Email:</label>
           <input 
             type="email" 
@@ -201,30 +204,35 @@
             required 
             placeholder="Enter your email"
           />
+         </div>
         
           <!-- Phone -->
-          <label for="phone">Phone:</label>
-          <input 
-            type="tel" 
-            id="phone" 
-            name="phone"
-            pattern="[6-9][0-9]{9}" 
-            maxlength="10"
-            required 
-            placeholder="10-digit number starting with 6/7/8/9"
-          />
+          <div>
+            <label for="phone">Phone:</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              pattern="[6-9][0-9]{9}" 
+              maxlength="10"
+              required 
+              placeholder="10-digit number starting with 6/7/8/9"
+            />
+          </div>
         
           <!-- Message -->
-          <label for="message">Message:</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            required 
-            placeholder="Write your message..."
-          ></textarea>
+          <div>
+            <label for="message">Message:</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              placeholder="Write your message..."
+            ></textarea>
+          </div>
         
           <!-- Submit -->
-          <button type="submit">Submit</button>
+          <button class="site_btn brd_light" type="submit">Submit</button>
         </form>
         
       </div>
