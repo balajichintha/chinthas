@@ -319,11 +319,10 @@ header.scrolled::after {
 .logo a {
     position: relative;
     display: inline-grid;
-    top: -5px;
 }
 
 .logo img {
-    width: 160px;
+    width: 110px;
 }
 
 #navlinks {
@@ -494,27 +493,40 @@ header.scrolled::after {
     justify-content: center;
 }
 
+.banner_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 #hp_banner h1 {
     position: relative;
     color: #f2f2f2;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 15px 5px;
     font-family: "Nunito", sans-serif;
-    font-size: clamp(22px, 80vw/12, 80px);
-    line-height: clamp(26px, 80vw/14, 80px);
+    font-size: clamp(25px, 45vw/16, 45px);
+    line-height: clamp(26px, 45vw/16, 45px);
     font-weight: 600;
     padding: 0 0 30px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+#hp_banner h1 span {
+    color: #8c52ff;
 }
 
 #hp_banner h2 {
     position: relative;
     margin: 0;
-    padding: 40px 0 0;
+    padding: 32px 0 0 1.5px;
     font-family: "Calistoga", serif;
-    font-size: clamp(12px, 20vw/12, 20px);
-    line-height: 20px;
-    letter-spacing: 10px;
+    font-size: clamp(10px, 18vw/16, 18px);
+    letter-spacing: 8px;
     text-transform: uppercase;
     color: #fff;
 }
@@ -552,7 +564,7 @@ header.scrolled::after {
         align-items: center;
         justify-content: flex-end;
         text-align: center;
-        padding: 100px 20px 50px;
+        padding: 100px 20px 35px;
     }
 
     #hp_banner h1 {
@@ -561,9 +573,9 @@ header.scrolled::after {
     }
 
     #hp_banner h2 {
-        letter-spacing: 7px;
-        width: 100%;
-        padding: 15px 0 0;
+        width: auto;
+        padding: 15px 0 0 2px;
+        text-align: center;
     }
 }
 
@@ -594,8 +606,8 @@ footer h2 {
     padding: 0;
     margin: 0;
     font-family: "Calistoga", serif;
-    font-size: clamp(20px, 40vw/12, 40px);
-    line-height: clamp(28px, 50vw/12, 50px);
+    font-size: clamp(20px, 40vw/16, 40px);
+    line-height: clamp(28px, 50vw/15, 50px);
     font-weight: 400;
     letter-spacing: 1px;
 }
@@ -664,10 +676,6 @@ footer h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-#footer_bottom .logo {
-    top: -6px;
 }
 
 #footer_bottom {
